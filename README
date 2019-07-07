@@ -1,0 +1,23 @@
+Set version:
+
+imxversion=8.1
+
+Download the archive:
+
+wget https://www.nxp.com/lgfiles/NMG/MAD/YOCTO/firmware-imx-$imxversion.bin
+
+Unpack it and accept the license agreement:
+
+sh ./firmware-imx-$imxversion.bin --auto-accept --force
+
+Rename output directory for convenience:
+
+mv firmware-imx{-$imxversion,}
+
+Temporary add to Git so Gear will be able to work with it:
+
+git add firmware-imx
+
+Build package:
+
+gear-hsh -v --commit --no-sisyphus-check=packager,gpg,changelog -- -v --with-qemu=aarch64 --target=aarch64

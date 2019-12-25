@@ -1,5 +1,5 @@
 Name: firmware-imx
-Version: 8.1
+Version: 8.5
 Release: alt1
 
 Summary: NXP iMX BSP firmware
@@ -28,5 +28,8 @@ done
 /lib/firmware/imx
 
 %changelog
+* Wed Dec 25 2019 Pavel Nakonechnyi <zorg@altlinux.org> 8.5-alt1
+- updated to version 8.5
+
 * Sun Jul 07 2019 Pavel Nakonechnyi <zorg@altlinux.org> 8.1-alt1
 - initial build of iMX BSP firmware
